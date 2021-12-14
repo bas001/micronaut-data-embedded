@@ -1,0 +1,15 @@
+datasources:
+  default:
+    driverClass: org.hsqldb.jdbc.JDBCDriver
+    url: "jdbc:hsqldb:mem:testdb;sql.syntax_ora=true"
+    username: sa
+    autoCommit: false
+    maximumPoolSize: 1
+    leakDetectionThreshold: 180000
+    poolName: hikariConnectionPoolName
+    minimumIdle: 5
+    connection-init-sql: "create table foo (
+    id number,
+    bar_bar1 varchar(4),
+    bar_bar2 varchar(4)
+  )"
